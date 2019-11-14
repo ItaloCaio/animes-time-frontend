@@ -9,11 +9,12 @@ import { AnimesComponent } from './animes/animes.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { MyAnimeComponent } from './my.anime/my.anime.component';
+import { EpisodeComponent } from './episode/episode.component';
 
 @NgModule({
   declarations: [
     AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
-    LoginComponent, MyAnimeComponent
+    LoginComponent, MyAnimeComponent, EpisodeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,6 @@ import { MyAnimeComponent } from './my.anime/my.anime.component';
   ],
   providers: [],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
-    LoginComponent, MyAnimeComponent]
+    LoginComponent, MyAnimeComponent, EpisodeComponent]
 })
 export class AppModule { }
