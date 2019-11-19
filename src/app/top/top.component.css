@@ -2,9 +2,16 @@
     color: white;
 }
 
-#center {
+.center {
     margin: auto;
     width: auto;
     padding: 10px;
     color: white;
+}
+
+.top-position {
+    float: right;
+}
+.top-position-center {
+    text-align:center;
 }
