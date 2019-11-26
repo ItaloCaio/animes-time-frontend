@@ -1,8 +1,8 @@
-<div class="row">
+
 
     <div class="container">
 
-        <h1>Entrar no site</h1>
+        <h3>Entrar no site</h3>
 
         <form class="form-horizontal">
 
@@ -18,17 +18,16 @@
                 <input type="password" class="form-control" placeholder="Senha"
                     aria-describedby="sizing-addon1">
             </div>
-
             <br>
-            <br>
-            <div>
-                <button type="submit"  ng-disabled="!usuario.email|| !usuario.senha"
-                    class="btn btn-success">Entrar</button>
+            <div class="row">
+                <button type="submit" class="btn btn-success">Entrar</button>
             </div>
-
-            <a>Novo usuário? <a href="cadastro.html">Crie uma conta</a></a>
+            <br>
+            <div class="row"> <a>Novo usuário? <a routerLink="/cadastro">Crie uma conta</a></a> </div>
+            <br>
+            <div class="row"> <a>Esqueceu senha? <a routerLink="/recuperar-senha">Recupere sua senha</a></a></div>
+          
         </form>
 
     </div>
     <!--/span-->
-</div>

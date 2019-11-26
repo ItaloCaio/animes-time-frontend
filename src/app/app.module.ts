@@ -10,6 +10,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { MyAnimeComponent } from './my.anime/my.anime.component';
 import { EpisodeComponent } from './episode/episode.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EpisodeComponent } from './episode/episode.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
