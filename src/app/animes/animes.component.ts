@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Anime } from '../shared/anime';
 import { AnimesService } from './animes.service';
+import { LoginService } from '../login/login.service';
+import { User } from '../shared/user';
+import { MyAnimes } from '../shared/myAnimes';
 
 @Component({
   selector: 'animes-selector',
@@ -10,8 +13,9 @@ import { AnimesService } from './animes.service';
 export class AnimesComponent implements OnInit {
  
   public animes: Anime[];
+  user: User;
 
-  constructor(private animesService: AnimesService) {
+  constructor(private animesService: AnimesService, private loginService: LoginService) {
 
   }
 
@@ -19,5 +23,22 @@ export class AnimesComponent implements OnInit {
       this.animesService.getAnimes()
      .then((animes: Anime[]) => 
       this.animes = animes);
+
+      this.loginService.getUserOn()
+    .then((user: User) => {
+      this.user = user;
+      console.log( user);
+    }
+    );  
+  }
+
+  add(anime: Anime){
+    
+    this.animesService.addMyAnime(this.user._id, anime)
+    .then((myAnime: MyAnimes) => {
+      console.log('meu anime: ' + myAnime.anime);
+    }
+    );  
+
   }
 }

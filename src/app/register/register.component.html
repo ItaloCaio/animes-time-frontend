@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Cadastro</h1>
 
 <form #f="ngForm" (ngSubmit)="register()" class="form-horizontal">
@@ -20,7 +21,7 @@
         <div class="form-group">
             <label for="senha" class="col-sm-2 control-label">Senha</label>
             <div class="col-sm-10">
-                <input type="text" [(ngModel)]="password" name="password" class="form-control" id="senha" placeholder="Senha">
+                <input type="password" [(ngModel)]="password" name="password" class="form-control" id="senha" placeholder="Senha">
             </div>
         </div>
 
@@ -28,9 +29,9 @@
 
 
             <div>
-                <button type="submit" ng-click="salvar(usuario)" class="btn btn-success">Cadastrar</button>
+                <button type="submit" ng-click="salvar(usuario)" class="btn btn-success margem">Cadastrar</button>
 
-                <button type="submit" class="btn btn-danger">Cancelar</button>
+                <button type="submit" class="btn btn-danger margem">Cancelar</button>
                 <div class="form-group">
                     <br>
                 </div>
@@ -39,3 +40,4 @@
         </div>
     </div>
 </form>
+</div>

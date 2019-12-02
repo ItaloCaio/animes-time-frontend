@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.loginService.getUserOn()
     .then((user: User) => {
       this.user = user;
-      console.log('Usuario: ' + user);
+      console.log( user);
     }
     );  
   }

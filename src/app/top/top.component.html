@@ -5,9 +5,9 @@
       </div>
     <a class="blog-header-logo text-dark " href="">Animes Time</a>
     <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" routerLink="/cadastro">Cadastrar </a>
-        <a class="btn btn-sm btn-outline-secondary" routerLink="/login">Entrar</a>
-        <a class="btn btn-sm btn-outline-secondary" href="">Sair</a>
+        <a class="btn btn-sm btn-outline-secondary margem" *ngIf="user == undefined" routerLink="/cadastro">Cadastrar </a>
+        <a class="btn btn-sm btn-outline-secondary margem" *ngIf="user == undefined" routerLink="/login">Entrar</a>
+        <a class="btn btn-sm btn-outline-secondary margem" *ngIf="user != undefined" (click)="out()" href="">Sair</a>
        
         
       </div>

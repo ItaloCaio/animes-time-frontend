@@ -16,6 +16,7 @@ import { AnimesService } from './animes/animes.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './login/login.service';
 import { FormsModule } from '@angular/forms';
+import { MyAnimeService } from './my.anime/myAnimes.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AnimesService, LoginService],
+  providers: [AnimesService, LoginService, MyAnimeService],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
     LoginComponent, MyAnimeComponent, EpisodeComponent]
 })
