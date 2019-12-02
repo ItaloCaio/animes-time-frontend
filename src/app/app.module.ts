@@ -12,6 +12,10 @@ import { MyAnimeComponent } from './my.anime/my.anime.component';
 import { EpisodeComponent } from './episode/episode.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { AnimesService } from './animes/animes.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login/login.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,10 @@ import { ROUTES } from './app.routes';
     BrowserModule,
     AppRoutingModule, 
     RouterModule.forRoot(ROUTES),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AnimesService, LoginService],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
     LoginComponent, MyAnimeComponent, EpisodeComponent]
 })

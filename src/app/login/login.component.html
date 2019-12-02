@@ -1,33 +1,33 @@
+<div class="container">
 
+    <h3>Entrar no site</h3>
 
-    <div class="container">
+    <form #f="ngForm" (ngSubmit)="login(f)" class="form-horizontal">
 
-        <h3>Entrar no site</h3>
+        <div class="input-group input-group-lg">
 
-        <form class="form-horizontal">
+            <input type="text" class="form-control" placeholder="Email" id="email" aria-describedby="sizing-addon1"
+            required name="email"  [(ngModel)]="email">
+        </div>
+        <br>
 
-            <div class="input-group input-group-lg">
+        <div class="input-group input-group-lg">
 
-                <input type="text" class="form-control" placeholder="Email" 
-                    aria-describedby="sizing-addon1">
-            </div>
-            <br>
+            <input type="password" class="form-control" placeholder="Senha" id="password"
+                aria-describedby="sizing-addon1" required name="password" [(ngModel)]="password">
+        </div>
+        <br>
+        <div class="row">
+            <button type="submit" class="btn btn-success">Entrar</button>
+        </div>
+        <br>
+        <div class="row"> <a>Novo usuário? <a routerLink="/cadastro">Crie uma conta</a></a> </div>
+        <br>
+        <div class="row"> <a>Esqueceu senha? <a routerLink="/recuperar-senha">Recupere sua senha</a></a></div>
 
-            <div class="input-group input-group-lg">
+    </form>
 
-                <input type="password" class="form-control" placeholder="Senha"
-                    aria-describedby="sizing-addon1">
-            </div>
-            <br>
-            <div class="row">
-                <button type="submit" class="btn btn-success">Entrar</button>
-            </div>
-            <br>
-            <div class="row"> <a>Novo usuário? <a routerLink="/cadastro">Crie uma conta</a></a> </div>
-            <br>
-            <div class="row"> <a>Esqueceu senha? <a routerLink="/recuperar-senha">Recupere sua senha</a></a></div>
-          
-        </form>
+</div>
+<!--/span-->
 
-    </div>
-    <!--/span-->
+{{password}} {{email}}

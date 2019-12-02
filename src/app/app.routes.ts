@@ -11,4 +11,5 @@ export const ROUTES: Routes =  [
     {path: 'meus-animes/:id', component: EpisodeComponent},
     {path: 'cadastro', component: RegisterComponent},
     {path: 'login', component: LoginComponent},
+    {path: 'animes/:id/episodios', component: EpisodeComponent},
 ];
