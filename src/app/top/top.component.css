@@ -9,13 +9,14 @@
     color: white;
 }
 
-.top-position {
-    float: right;
-}
+
 .top-position-center {
     text-align:center;
 }
 
+.top-position {
+    float: right;
+}
 .margem {
     margin-left: 10px;
     margin-right: 10px;

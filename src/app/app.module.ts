@@ -17,11 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './login/login.service';
 import { FormsModule } from '@angular/forms';
 import { MyAnimeService } from './my.anime/myAnimes.service';
+import { ListEpisodesComponent } from './list.episodes/list.episodes.component';
 
 @NgModule({
   declarations: [
     AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
-    LoginComponent, MyAnimeComponent, EpisodeComponent
+    LoginComponent, MyAnimeComponent, EpisodeComponent, ListEpisodesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +33,6 @@ import { MyAnimeService } from './my.anime/myAnimes.service';
   ],
   providers: [AnimesService, LoginService, MyAnimeService],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
-    LoginComponent, MyAnimeComponent, EpisodeComponent]
+    LoginComponent, MyAnimeComponent, EpisodeComponent, ListEpisodesComponent]
 })
 export class AppModule { }

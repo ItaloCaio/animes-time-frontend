@@ -30,8 +30,6 @@ export class MyAnimeComponent implements OnInit {
       }
       ); 
     console.log('My anime ID:' + this.user);
-
-    
         
   }
 
