@@ -19,9 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { MyAnimeService } from './my.anime/myAnimes.service';
 import { ListEpisodesComponent } from './list.episodes/list.episodes.component';
 import { DownloadedComponent } from './downloaded/downloaded.component';
-import { DownloadService } from './downloaded/downloaded.service';
 import { WatchedComponent } from './watchs/watchs.component';
-import { WatchService } from './watchs/watchs.service';
+
 
 @NgModule({
   declarations: [
@@ -36,8 +35,8 @@ import { WatchService } from './watchs/watchs.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AnimesService, LoginService, MyAnimeService, DownloadService, WatchService],
+  providers: [AnimesService, LoginService, MyAnimeService],
   bootstrap: [AppComponent, MenuComponent, TopComponent, AnimesComponent, RegisterComponent, 
     LoginComponent, MyAnimeComponent, EpisodeComponent, ListEpisodesComponent]
 })
-export class AppModule { }
+export class AppModule {}

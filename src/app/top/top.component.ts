@@ -23,7 +23,7 @@ export class TopComponent implements OnInit{
   }
 
   out(){
-    console.log("Saiu");
+    this.loginService.getOut();
   }
  
 }

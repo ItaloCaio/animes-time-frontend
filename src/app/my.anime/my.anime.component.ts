@@ -29,8 +29,11 @@ export class MyAnimeComponent implements OnInit {
         this.myAnimes = myAnime);
       }
       ); 
-    console.log('My anime ID:' + this.user);
         
+  }
+
+  remover(myAnime: MyAnimes){
+      this.myAnimeService.deleteMyAnime(this.user._id, myAnime);
   }
 
 

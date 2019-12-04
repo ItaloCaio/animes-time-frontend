@@ -1,39 +1,15 @@
 <div class="container">
     <br>
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJQ_PJfiMRrUeK9sLWPD3PkTwN8IaD17dKXC4F73-Rk1ipunfGA&s"
-                    alt="..." style="width: 10rem;">
-            </div>
-            <div class="col">
-                <h4 class="display-4">Hello, world!</h4>
-                <div class="row">
-                    <div class="col"> <span class="badge badge-secondary">Assistido</span> </div>
-                    <div class="col"> <span class="badge badge-primary">Baixado</span></div>
-                </div>
-            </div>
-        </div>
+    <div class="text-center">Comentários do Episodio</div>
+    <div *ngFor="let comment of comments" href="#" class="list-group-item comment-margin">
+        <div class="d-flex w-100 justify-content-between">
+            <h6 class="mb-1" style="color: blue">{{comment.userId}}</h6>
 
-    </div>
-    <div href="#" class="list-group-item comment-margin">
-        <div class="d-flex w-100 justify-content-between">
-            <h6 class="mb-1">USERNAME</h6>
-           
         </div>
-        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-            blandit.
+        <p class="mb-1">{{comment.comment}}
         </p>
     </div>
-    <div href="#" class="list-group-item comment-margin">
-        <div class="d-flex w-100 justify-content-between">
-            <h6 class="mb-1">USERNAME</h6>
-        </div>
-        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-            blandit.
-        </p>
-    </div>
-    
+
     <br>
     <div class="container">
         <div class="row ">
@@ -41,7 +17,7 @@
                 <textarea class="form-control" rows="3"></textarea>
             </div>
             <div class="col text-center">
-                <a class="btn btn-primary center">Enviar</a>
+                <a class="btn btn-primary btn-lg" style="color:white;">Enviar</a>
             </div>
         </div>
     </div>

@@ -1,10 +1,15 @@
-<ul class="list-group">
-    <li *ngFor="let episode of episodes"  class="list-group-item" aria-disabled="true">
-             {{episode.name}}
-     
-         <button type="button" class="btn btn-secondary position margem" (click)="isWatched(episode)" *ngIf="!episode.isWatched">Assistido</button>
-         <button type="button" class="btn btn-primary position margem" (click)="isDownloaded(episode)" *ngIf="!episode.isDownloaded">Baixado</button>
-         <button type="button" class="btn btn-success position margem" routerLink="/animes/{{episode.animeId}}/episodios/{{episode._id}}">Ver</button>
-        </li>
-
-  </ul>
+<div class="container"> 
+    <br>
+    <div class="text-center"> Lista de Episodios </div>
+    <br>
+    <ul class="list-group">
+        <li *ngFor="let episode of episodes"  class="list-group-item" aria-disabled="true">
+                 {{episode.name}}
+         
+             <button type="button" class="btn btn-secondary position margem" (click)="isWatched(episode)" >Assistido</button>
+             <button type="button" class="btn btn-primary position margem" (click)="isDownloaded(episode)" >Baixado</button>
+             <button type="button" class="btn btn-success position margem" routerLink="/comentarios/{{episode._id}}">Ver Comentários</button>
+            </li>
+    
+      </ul>
+</div>

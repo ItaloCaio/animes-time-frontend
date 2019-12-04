@@ -17,4 +17,8 @@ export class LoginService {
     public register(user: User): Promise<User> {
         return this.http.post<User>('http://localhost:3000/users/register', user).toPromise();
     }
+
+    public getOut(): Promise<User> {
+        return this.http.get<User>('http://localhost:3000/users/out/auth').toPromise();
+    }
 }

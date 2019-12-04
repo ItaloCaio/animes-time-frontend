@@ -18,4 +18,10 @@ export class MyAnimeService {
     public register(user: User): Promise<User> {
         return this.http.post<User>('http://localhost:3000/users/register', user).toPromise();
     }
+
+    public deleteMyAnime(id: string, myAnime: MyAnimes): Promise<MyAnimes> {
+
+        const url = 'http://localhost:3000/' + id +'/my-animes/'  + myAnime._id;
+        return this.http.delete<MyAnimes>(url).toPromise();
+    }
 }

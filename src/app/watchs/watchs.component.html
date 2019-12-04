@@ -1,0 +1,17 @@
+<div class="container">
+    <br>
+    <div class="text-center"> Lista de Episodios Assistidos </div>
+    <br>
+    <ul class="list-group">
+        <li *ngFor="let episode of episodes" class="list-group-item" aria-disabled="true">
+            {{episode.episode.name}}
+
+            <button type="button" class="btn btn-danger position margem" (click)="deleteEpisode(episode)">Remover</button>
+            <button type="button" class="btn btn-success position margem"
+            routerLink="/comentarios/{{episode.episode._id}}">
+                Ver Comentários
+            </button>
+        </li>
+
+    </ul>
+</div>

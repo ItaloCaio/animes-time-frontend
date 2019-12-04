@@ -1,7 +1,7 @@
 import { Anime } from './anime';
 
 export class MyAnimes {
-     id?: string;
+     _id?: string;
      anime: Anime;
      userId: string;
 }

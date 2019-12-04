@@ -27,7 +27,6 @@ export class AnimesComponent implements OnInit {
       this.loginService.getUserOn()
     .then((user: User) => {
       this.user = user;
-      console.log( user);
     }
     );  
   }

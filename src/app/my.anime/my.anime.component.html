@@ -1,17 +1,17 @@
-<div *ngFor="let anime of myAnimes" class="row animes-card-marge">
-    <div class="col-sm-4">
+<div  class="row animes-card-marge">
+    <div class="col-sm-4" *ngFor="let anime of myAnimes">
         <div class="card w-60 card-margin">
             <div class="card-body">
                 <div class="row">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJQ_PJfiMRrUeK9sLWPD3PkTwN8IaD17dKXC4F73-Rk1ipunfGA&s"
+                    <img  src="/assets/animes/{{anime.anime.name}}.jfif"
                         alt="..." style="width: 10rem;" class="card-img-top object-center">
                 </div>
                 <div class="row">
                     <h5 class="card-title object-center">{{anime.anime.name}}</h5>
                 </div>
             </div>
-                <a routerLink="/episodio" routerLink="/animes/{{anime.anime._id}}/episodios"class="btn btn-primary button-padding">Abrir</a>
-                <a href="#" class="btn btn-danger button-padding">Remover</a>
+                <a routerLink="/episodio" routerLink="/animes/{{anime.anime._id}}/episodios"class="btn btn-primary button-padding">Exibir Episodios</a>
+                <a href="/meus-animes" class="btn btn-danger button-padding" (click)="remover(anime)">Remover</a>
         </div>
     </div>
     
